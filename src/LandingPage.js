@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Modal, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -6,6 +6,12 @@ import axios from 'axios';
 function LandingPage({ onLogin }) {
     const [showLogin, setShowLogin] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
+
+    useEffect(() => {
+        document.title = "My Blossom App 🌸";
+    }, []);
+
+    // ... rest of your code
 
     // Form input states
     const [loginEmail, setLoginEmail] = useState('');
